@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Formulaire</title>
+</head>
+<body>
+	{% extends 'base_generic.html' %}
+
+{% block content %}
+  <h1>Ajouter un nouveau pilote</h1>
+
+    <form method="post">
+      {% csrf_token %}
+      {{ pilote_form.as_p }}
+      <input type="submit" value="Enregistrer">
+    </form>
+{% endblock %}
+
+</body>
+</html>
+</html>
